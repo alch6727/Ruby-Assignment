@@ -3,4 +3,4 @@ def palindrome?(string)
 	sentence == sentence.reverse
 end
 
-palindrome?("A man, a plan, a canal -- Panama")
+p palindrome?("A man, a plan, a canal -- Panama")
