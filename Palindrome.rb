@@ -4,3 +4,4 @@ def palindrome?(string)
 end
 
 p palindrome?("A man, a plan, a canal -- Panama")
+p palindrome?("This shouldn't work.")
