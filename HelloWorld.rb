@@ -2,10 +2,10 @@
 # Copied from class assignment
 class HelloWorldClass
     def initialize(name)
-       @name = name.capitalize
+       @name = name.capitalize #set an instance variable and capitalize it
     end
     def sayHi
-        puts "Hello #{@name}!"
+        puts "Hello #{@name}!" #interprets the value
     end
 end
 hello = HelloWorldClass.new("Alice")

@@ -1,19 +1,18 @@
+#Homework Problem 5
+#Received help from StackExchange
 def combine_anagrams(words)
+	#group_by creates a hash and groups according to what's in {}
+	#the word is sorted by chars after converting it to lowercase, it is then joined to create a string
+	#the values of the hash are printed out for the array of arrays
 	words.group_by{|word| word.downcase.chars.sort.join}.values
-=begin
-	array = Array.new
-	tempArray = Array.new
-	testArray = Array.new(words)
-	testArray.each do |word|
-		word = word.chars.sort_by(&:downcase).join
-	end
-	testArray.each_index.select do |word, index|
-		if testArray.include? word
-			tempArray.insert(words[index])
-		end
-		array.insert(tempArray)
-		p array
-	end
-=end
 end
-p combine_anagrams(["cat", "tac", "mac"])
+
+def test
+	puts "Testing anagrams: Second test is from the assignment"
+	p combine_anagrams(["cat", "tac", "mac", "Cam"])
+	# => [["cat", "tac"], ["mac", "Cam"]]
+	p combine_anagrams(['cars', 'for', 'potatoes', 'racs', 'four', 'scar', 'creams', 'scream'])
+	# => [["cars", "racs", "scar"], ["for"], ["potatoes"], ["four"], ["creams", "scream"]]
+end
+
+test
